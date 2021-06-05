@@ -1,8 +1,8 @@
 \documentclass[]{article}
-\usepackage{hyperref,geometry,fancyhdr,graphicx}
+\usepackage{hyperref,geometry,fancyhdr,graphicx,needspace}
 \usepackage{titlesec,xcolor}
 \usepackage{baskervald}
-\usepackage{setspace}\setstretch{1.1}
+\usepackage{setspace}\setstretch{1.05}
 
 \geometry{width=5.5in,height=8.5in,centering}
 
@@ -82,27 +82,21 @@
 \section*{Understanding Science: Scientific Inference}
 
 \renewcommand{\contentsname}{\vspace{-48pt}}
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{1}
 \tableofcontents
 
 
 
-\newbit This document is \copyright 2017--8 by P.D. Magnus. Some rights reserved.
+\newbit This document is \copyright 2017--21 by P.D. Magnus. Some rights reserved.
 
 It is offered under a Creative Commons Attribution 4.0 license.
+You are free to copy this book, to distribute it, to display it, and to make derivative works, under the condition of Attribution. You must give the original author credit. This complete and precise license is available on-line at \url{http://creativecommons.org/licenses/by/4.0/}
 
-{\footnotesize
-You are free to copy this book, to distribute it, to display it, and to make derivative works, under the following conditions: Attribution. You must give the original author credit. --- This is a human-readable summary of the license, which is available on-line at \url{http://creativecommons.org/licenses/by/4.0/}
-}
-
-{\footnotesize
-Version 0.7, \today
-}
+This document is current as of \today
 
 
 
 
-\paragraph{A note to the reader:} This chapter uses numerous sample arguments to introduce various logical concepts. You should read the sample arguments and think for yourself: `Is this the sort of thing that I would accept as a reason?'
 
 
 \newpage
@@ -110,7 +104,7 @@ Version 0.7, \today
 % Create some nice looking section dividers without too much fuss
 \titleformat\section{\Large\bf}{}{0 em}
   {%
-%  	\newpage
+  	\needspace{48pt}
     \begingroup
       \color{gray!30}%
       \titleline{\leaders\hrule height 0.2 em\hfill\kern 0 pt\relax}%
@@ -123,6 +117,7 @@ Version 0.7, \today
 
 \titleformat\subsection{\large\it}{}{0 em}
   {%
+  	\needspace{36pt}
     \begingroup
       \color{gray!30}%
       \titleline{\leaders\hrule height 0.2 em\hfill\kern 0 pt\relax}%
@@ -154,6 +149,7 @@ In order to make it clearer, we will typically present an argument as a list of 
 \newbit
 In general, there are two ways to answer or attack an argument. First, you can challenge the premises. An argument only gives you a reason to believe the conclusion \emph{if} you believe the premises, so denying the premises gives you space to reject the conclusion. Second, you can challenge the connection between the premises and the conclusion. That connection can be different for different kinds of argument.
 
+\paragraph{A note to the reader:} This chapter uses numerous sample arguments to introduce various logical concepts. You should read the sample arguments and think for yourself: `Is this the sort of thing that I would accept as a reason?'
 
 \subsection{Deduction}
 
@@ -494,7 +490,7 @@ One might complain that the material theory of induction does not really solve t
 
 \section{Inferring unobserved causes}
 
-Imagine that I come home to see that my front window is shattered. When I unlock the door and go inside, I immediately notice that the television is not in the front room where I usually keep them. I yell to nobody in particular, ``I've been robbed!''
+Imagine that I come home to see that my front window is shattered. When I unlock the door and go inside, I immediately notice that the television is not in the front room where it usually is. I yell to nobody in particular, ``I've been robbed!''
 
 In the moment, I probably would not think of this inference as an explicit argument. If I did, it would look like this:
 
@@ -618,11 +614,11 @@ In our example, a break-in/robbery explains both the broken window and the missi
 
 \subsubsection{Simplicity}
 
-A good explanation should be \emph{simple}. It should not posit any more than is required to do the explaining. For example, the additional supposition that there was a Charlie's Angels t-shirt (in \#\ref{robbed-tshirt}) is not required to explain how the window was broken and why the television is missing --- so the explanation that adds it is \emph{worse} than the explanation which does not. Similarly, an explanation which posits different causes for the broken window and the missing television is more complex (less simple) and so not as good an explanation.
+A good explanation should be \emph{simple}. It should not posit any more than is required to do the explaining. For example, the additional supposition that there was a Charlie's Angels t-shirt (in \#\ref{robbed-tshirt}) is not required to explain how the window was broken and why the television is missing--- so the explanation that adds it is \emph{worse} than the explanation which does not. Similarly, an explanation which posits different causes for the broken window and the missing television is more complex (less simple) and so not as good an explanation.
 
 Note that this feature of explanations highlights how they are different than deductive arguments. If you add an extra premise to a deductive argument, the argument cannot get any worse. You can often derive more with extra premises, and you can always derive at least as much. (This is why HD confirmation suffers from the tacking paradox--- it relies on deducing the evidence from the hypothesis, and adding extraneous stuff to the hypothesis won't make the deduction any worse.) Yet adding extra elements to an explanation can make it a \emph{worse} explanation, if the extra elements are extraneous.
 
-\terminology The requirement of simplicity is sometimes formulated as Occam's Razor. Named for the 14th-century logician William of Occam this is the principle that \emph{an explanation should not posit any more entities than are necessary to do the explaining}. The principle is also sometimes called `parsimony'.
+\terminology The requirement of simplicity is sometimes formulated as Occam's Razor. Named for the 14th-century logician William of Occam, this is the principle that \emph{an explanation should not posit any more entities than are necessary to do the explaining}. The principle is also sometimes called `parsimony'.
 
 
 \subsection{Problems with IBE}
@@ -639,7 +635,7 @@ One might try to say that the former explanation has a \emph{larger} scope, beca
 \item
 The criteria for what counts as a good explanation can be ambiguous. To consider one: There has been a great deal of work done trying to encode what it means for an explanation to be \emph{simple}, with only limited success. Although it is easy to write Occam's Razor on a bumper sticker, applying it in particular cases is not always so easy.
 \item
-Different criteria can come into conflict. It is often possible to explain more by adding complexity to an explanation --- that is, to attain greater scope at the cost of less simplicity. Although there are different formal methods for handling this kind of problem, there is no general solution.
+Different criteria can come into conflict. It is often possible to explain more by adding complexity to an explanation--- that is, to attain greater scope at the cost of less simplicity. Although there are different formal methods for handling this kind of problem, there is no general solution.
 \item
 Even if it were possible to characterize `best explanation' in a completely precise way, one might still ask why we should think that the best explanation is likely to be \emph{true}. If the world is rigged together in an abstruse way, then perhaps the simpler explanation is the last thing we should believe!
 \end{itemize}
@@ -651,7 +647,7 @@ So far, the sample arguments have been rather simple and sometimes downright sil
 
 The evidence for scientific claims is always partial. There are things we cannot observe, and we do not make all the possible observations anyway. Scientific theories include claims about things beyond the times and places that have been observed, and also about kinds of things which could never the observed directly: quarks, protein folding, the Big Bang, dinosaurs, and so on\ldots
 
-So scientific inference is ampliative. It follows from this that scientific conclusions could conceivably be false even though all the evidential premises are true. More than that, we fully expect that most of our scientific theories will need to be revised at least in the details --- they are not perfectly and precisely correct.
+So scientific inference is ampliative. It follows from this that scientific conclusions could conceivably be false even though all the evidential premises are true. More than that, we fully expect that most of our scientific theories will need to be revised at least in the details--- they are not perfectly and precisely correct.
 
 This fact, that evidence does not uniquely pick out the correct scientific account, is called the \emph{underdetermination of theory by data}.
 
@@ -687,7 +683,7 @@ So, \emph{if} light travels in a straight line, \emph{then} our observation indi
 
 At the outset of Copernicus' argument, we all just assumed that light travels in a straight line. But suppose you also thought, at the outset, that the Earth was flat. The argument relies upon the straight-line propagation of light to show that the Earth is round. Confronted with the argument and the observation, you might change your mind about the shape of the Earth. Alternately, you might change your mind about how light behaves. There is no rule of logic that tells you which change is the right one to make.
 
-The same problem arises for scientists when an observation seems to conflict with some theory that they accept. Typically, the argument against the theory will require more premises than just the observation. It will also require other theoretical commitments --- like the belief in our example that light travels in a straight line. The scientists may save their theory from refutation by abandoning the other commitments.
+The same problem arises for scientists when an observation seems to conflict with some theory that they accept. Typically, the argument against the theory will require more premises than just the observation. It will also require other theoretical commitments--- like the belief in our example that light travels in a straight line. The scientists may save their theory from refutation by abandoning the other commitments.
 
 This point was made famous by WVO Quine in the essay `Two Dogmas of Empiricism', where he attributed it to Pierre Duhem. So it is often called the \emph{Duhem-Quine problem}. 
 
